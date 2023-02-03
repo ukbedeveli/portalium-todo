@@ -10,4 +10,19 @@ class DefaultController extends WebController
     {
         return $this->render('index');
     }
+    public function actionHi($name)
+    {
+        $welcome = "Hi, welcome " . $name;
+
+
+        return $this->render('hi',['welcome' => $welcome]);
+    }
+    //toplama islemini kullanicidan veri girmesi araciligiyla yapiyoruz( calc?a=10&b=5 )
+    public function actionCalc($a,$b)
+    {
+        $total =     $a + $b;
+
+
+        return $this->render('calc',['total' => $total]);
+    }
 }

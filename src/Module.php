@@ -2,8 +2,8 @@
 
 namespace ukbedeveli\todo;
 
-use portalium\base\Event;
-use portalium\package\components\TriggerActions;
+//use portalium\base\Event;
+//use portalium\package\components\TriggerActions;
 
 class Module extends \portalium\base\Module
 {
@@ -18,7 +18,7 @@ class Module extends \portalium\base\Module
     
     public static function moduleInit()
     {
-        self::registerTranslation('template','@ukbedeveli/todo/messages',[
+        self::registerTranslation('todo','@ukbedeveli/todo/messages',[
             'todo' => 'todo.php',
         ]);
     }
@@ -28,8 +28,8 @@ class Module extends \portalium\base\Module
         return parent::coreT('todo', $message, $params);
     }
 
-    public function registerEvents()
+   /* public function registerEvents()
     {
         Event::on($this::className(), UserModule::EVENT_USER_DELETE_BEFORE, [new TriggerActions(), 'onUserDeleteBefore']);
-    }
+    }*/
 }
